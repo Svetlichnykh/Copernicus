@@ -1,0 +1,51 @@
+export const locales = [
+  "en",
+  "ru",
+  "es",
+  "tr",
+  "uk",
+  "de",
+  "sq",
+  "hy",
+  "az",
+  "be",
+  "bs",
+  "ka",
+  "kk",
+  "ky",
+  "ro",
+  "mn",
+  "mk",
+  "sr",
+  "tg",
+  "tk",
+  "uz",
+] as const;
+
+export type Locale = (typeof locales)[number];
+
+export const defaultLocale: Locale = "en";
+
+export const localeMeta: Record<Locale, { label: string; nativeLabel: string; flag: string }> = {
+  en: { label: "English", nativeLabel: "English", flag: "🇬🇧" },
+  ru: { label: "Russian", nativeLabel: "Русский", flag: "🇷🇺" },
+  es: { label: "Spanish", nativeLabel: "Español", flag: "🇪🇸" },
+  tr: { label: "Turkish", nativeLabel: "Türkçe", flag: "🇹🇷" },
+  uk: { label: "Ukrainian", nativeLabel: "Українська", flag: "🇺🇦" },
+  de: { label: "German", nativeLabel: "Deutsch", flag: "🇩🇪" },
+  sq: { label: "Albanian", nativeLabel: "Shqip", flag: "🇦🇱" },
+  hy: { label: "Armenian", nativeLabel: "Հայերեն", flag: "🇦🇲" },
+  az: { label: "Azerbaijani", nativeLabel: "Azərbaycanca", flag: "🇦🇿" },
+  be: { label: "Belarusian", nativeLabel: "Беларуская", flag: "🇧🇾" },
+  bs: { label: "Bosnian", nativeLabel: "Bosanski", flag: "🇧🇦" },
+  ka: { label: "Georgian", nativeLabel: "ქართული", flag: "🇬🇪" },
+  kk: { label: "Kazakh", nativeLabel: "Қазақша", flag: "🇰🇿" },
+  ky: { label: "Kyrgyz", nativeLabel: "Кыргызча", flag: "🇰🇬" },
+  ro: { label: "Romanian", nativeLabel: "Română", flag: "🇲🇩" },
+  mn: { label: "Mongolian", nativeLabel: "Монгол", flag: "🇲🇳" },
+  mk: { label: "Macedonian", nativeLabel: "Македонски", flag: "🇲🇰" },
+  sr: { label: "Serbian", nativeLabel: "Српски", flag: "🇷🇸" },
+  tg: { label: "Tajik", nativeLabel: "Тоҷикӣ", flag: "🇹🇯" },
+  tk: { label: "Turkmen", nativeLabel: "Türkmençe", flag: "🇹🇲" },
+  uz: { label: "Uzbek", nativeLabel: "Oʻzbekcha", flag: "🇺🇿" },
+};

@@ -1,0 +1,136 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.75rem;
+
+  /* Copernicus Berlin brand: white + dark navy + orange */
+  --background: #ffffff;
+  --foreground: #19213d;
+
+  --card: #ffffff;
+  --card-foreground: #19213d;
+
+  --popover: #ffffff;
+  --popover-foreground: #19213d;
+
+  --primary: #19213d;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1f2f6;
+  --secondary-foreground: #19213d;
+
+  --muted: #f1f2f6;
+  --muted-foreground: #5c6377;
+
+  --accent: #ef7b23;
+  --accent-foreground: #ffffff;
+
+  --destructive: #d1402a;
+  --destructive-foreground: #fff5f2;
+
+  --border: #e3e5ec;
+  --input: #e3e5ec;
+  --ring: #ef7b23;
+
+  --success: #2f6b4f;
+  --success-foreground: #f2faf6;
+}
+
+.dark {
+  --background: #19213d;
+  --foreground: #ffffff;
+
+  --card: #202a4a;
+  --card-foreground: #ffffff;
+
+  --popover: #202a4a;
+  --popover-foreground: #ffffff;
+
+  --primary: #ffffff;
+  --primary-foreground: #19213d;
+
+  --secondary: #262f52;
+  --secondary-foreground: #ffffff;
+
+  --muted: #262f52;
+  --muted-foreground: #a6acc2;
+
+  --accent: #ef7b23;
+  --accent-foreground: #19213d;
+
+  --destructive: #e5766c;
+  --destructive-foreground: #2a0e0b;
+
+  --border: #313b64;
+  --input: #313b64;
+  --ring: #ef7b23;
+
+  --success: #6fbf9a;
+  --success-foreground: #08211a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 0.3rem);
+  --radius-md: calc(var(--radius) - 0.15rem);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.3rem);
+
+  --font-sans: var(--font-poppins);
+  --font-display: var(--font-poppins);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
